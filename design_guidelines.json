@@ -1,0 +1,115 @@
+
+Action: view_file({"path":"/app/design_guidelines.json"})
+Observation: [Showing lines 1-111 of 111 total] /app/design_guidelines.json:
+1|{
+2|  "theme": {
+3|    "mode": "light",
+4|    "description": "Warm premium editorial furniture aesthetic, quiet luxury, minimal architecture. Emphasizes craftsmanship and materials."
+5|  },
+6|  "colors": {
+7|    "background": "#F9F9F6",
+8|    "foreground": "#121212",
+9|    "primary": "#4A2E1B",
+10|    "primary_foreground": "#F9F9F6",
+11|    "secondary": "#E8E8E0",
+12|    "secondary_foreground": "#121212",
+13|    "border": "#DCDCC8",
+14|    "muted": "#8A8A80",
+15|    "accent": "#9E643A",
+16|    "instructions": "Use these colors as CSS variables. The primary is a deep wood tone. Background is a warm bone/off-white. Foreground is an obsidian charcoal (not pure black). Do NOT use generic purple AI gradients. High contrast is mandatory."
+17|  },
+18|  "typography": {
+19|    "heading_font": "Cormorant Garamond",
+20|    "body_font": "Manrope",
+21|    "hierarchy": {
+22|      "h1": "text-4xl sm:text-5xl md:text-6xl font-light tracking-tighter leading-none",
+23|      "h2": "text-3xl sm:text-4xl md:text-5xl font-light tracking-tight",
+24|      "h3": "text-xl sm:text-2xl font-normal",
+25|      "body": "text-base leading-relaxed tracking-wide",
+26|      "overline": "text-xs uppercase tracking-[0.2em] font-bold"
+27|    },
+28|    "instructions": "Import 'Cormorant Garamond' and 'Manrope' from Google Fonts. Use 'Cormorant Garamond' for all headings to provide an editorial, timeless luxury feel. Use 'Manrope' for body copy and navigation for stark, clean contrast. For the 'About' page manifesto numbers, use massive sizes like text-8xl as graphic elements."
+29|  },
+30|  "layouts": {
+31|    "spacing": "Generous Spacing Philosophy: use p-8, p-16, p-24, p-32. Let images and typography breathe. Asymmetrical layouts create tension and interest.",
+32|    "grid": "Bento Grid Protocol: Use Mode A (The 'Tetris' Grid) for catalogue and features. Mix col-span-8 and col-span-4. Avoid perfect symmetry.",
+33|    "header": "Sticky navigation (fixed, z-50) using Glassmorphism: backdrop-blur-xl and bg-[#F9F9F6]/80, with a delicate 1px border-b.",
+34|    "footer": "Dark contrast footer (bg-[#121212] text-[#F9F9F6]) with massive padding (py-32). Include a large typographic brand statement."
+35|  },
+36|  "motion": {
+37|    "global": "Lenis (@studio-freight/react-lenis) MUST be used for smooth momentum scrolling. It gives the site weight and premium feel.",
+38|    "hero_reveal": "Kinetic on-load masked line-by-line reveal: Wrap each line of H1 in an overflow-hidden span, and use framer-motion to translate y from '100%' to '0%' with a slight spring or easeOut.",
+39|    "scroll_parallax": "Implement a subtle parallax/3D effect on the main hero image or featured category image using framer-motion useScroll and useTransform (e.g., scaling the image slightly or moving it on the y-axis while scrolling).",
+40|    "marquee": "Editorial Marquee: Slow-moving serif text ribbon separated by large gaps. Use 'react-fast-marquee' or framer-motion. Text: 'Meticulously shaped by skilled artisans — Solid wood, fine leather, honed stone — Designed to endure'."
+41|  },
+42|  "components": {
+43|    "buttons": "Pill-shaped or crisp rectangular with 1px border. Default to solid primary. On hover: scale slightly down, background darkens, icon (if any) translates horizontally.",
+44|    "cards": "Do not use standard Shadcn cards for products. Use raw HTML/Tailwind to create spotlight clipped frames (e.g., aspect-[3/4] or aspect-[4/5] with overflow-hidden). Scale the image on group-hover.",
+45|    "forms": "Editorial contact form: Inputs and textareas should NOT have full borders. Use only a bottom border (border-b border-[#121212]/20). On focus, border color changes to primary. No focus rings.",
+46|    "toast": "Use 'sonner' for success messages upon form submission."
+47|  },
+48|  "pages": {
+49|    "home": "Features the kinetic text hero, a large parallax image moment, the slow editorial marquee, and a curated spotlight gallery of 2-3 products.",
+50|    "catalogue": "The Collections page. A filter tab system (All, Seating, Tables) above an asymmetrical bento grid showing real product photography.",
+51|    "about": "Features the 'Numbered Manifesto Chapters'. Uses massive typographic numbers ('01', '02') overlapping rich artisan photography (workshop, tools, wood textures) with generous negative space.",
+52|    "contact": "Split-screen layout. Left side: The editorial form. Right side: A stunning abstract wood texture macro shot. Minimalist and functional."
+53|  },
+54|  "image_urls": {
+55|    "hero_parallax": {
+56|      "url": "https://images.unsplash.com/photo-1758957701419-2c6e266f7988",
+57|      "description": "Luxury modern living room with sectional sofa, used for the main parallax hero image."
+58|    },
+59|    "catalogue_products": [
+60|      {
+61|        "url": "https://images.unsplash.com/photo-1622880355742-af182a61b362",
+62|        "description": "Brown wooden chair beside white wall - Seating"
+63|      },
+64|      {
+65|        "url": "https://images.unsplash.com/photo-1658211312038-4293c7bdd37e",
+66|        "description": "A wooden chair on a wood floor - Seating"
+67|      },
+68|      {
+69|        "url": "https://images.unsplash.com/photo-1565307586367-2c27d915cc8e",
+70|        "description": "Brown woven chair - Seating"
+71|      }
+72|    ],
+73|    "about_artisan": [
+74|      {
+75|        "url": "https://images.unsplash.com/photo-1547609434-b732edfee020",
+76|        "description": "Man sawing in room - Workshop/Craftsmanship context"
+77|      },
+78|      {
+79|        "url": "https://images.unsplash.com/photo-1582571881821-380713f48b29",
+80|        "description": "Tools and wood - Detail shot for materials chapter"
+81|      }
+82|    ],
+83|    "contact_side": {
+84|      "url": "https://images.unsplash.com/photo-1583418007992-a8e33a92e7ad",
+85|      "description": "Abstract wood texture macro - used for the right side of the contact page."
+86|    }
+87|  },
+88|  "instructions_to_main_agent": [
+89|    "Install and integrate 'framer-motion' for scroll-reveals and the kinetic line-by-line masked text hero.",
+90|    "Install and integrate '@studio-freight/react-lenis' for smooth momentum scrolling across the app.",
+91|    "Install 'lucide-react' for minimal icons.",
+92|    "Do NOT use default shadcn card styling for the catalogue; use custom Tailwind elements to create a premium editorial look with clipped aspect-[3/4] frames.",
+93|    "Implement a sticky navigation bar with a glass effect (backdrop-blur). Ensure text contrast is maintained.",
+94|    "The contact form must simulate a backend save, preventing default submission and showing a success toast using 'sonner'.",
+95|    "Add 'data-testid' to all interactive and key informational elements (buttons, form inputs, tabs) for automated testing.",
+96|    "Inject the Google Fonts for 'Cormorant Garamond' and 'Manrope' into index.html or global css."
+97|  ],
+98|  "accessibility": "Ensure all form inputs have associated labels (can be floating or screen-reader only if visually clear). Ensure minimum 4.5:1 contrast ratio for text. Provide a subtle focus state for interactive elements.",
+99|  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+100|    "Do not converge toward generic AI outputs. Avoid simplistic gradients and uniform, symmetrical layouts.",
+101|    "Create depth through layered design elements with z-index hierarchy and negative space.",
+102|    "Use glass-morphism effects with backdrop filters (12-24px blur) for sticky headers, maintaining an editorial clarity.",
+103|    "DO NOT apply universal transitions (transition: all). Add transitions for specific properties (opacity, transform) to prevent breaking animations.",
+104|    "DO NOT center align the app container (.App { text-align: center; }). Keep text left-aligned to respect natural reading flow.",
+105|    "Every interaction needs micro-animations - hover states (scale, image zoom inside container), transitions, and entrance animations.",
+106|    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+107|    "Never use AI assistant Emoji characters (🤖🧠💭💡🔮🎯) for icons.",
+108|    "Prioritize using pre-existing components from src/components/ui when applicable, but customize them heavily for the marketing aesthetic.",
+109|    "Use 'sonner' for toast notifications."
+110|  ]
+111|}
+[End of file]
