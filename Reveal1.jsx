@@ -1,0 +1,3 @@
+The DOM shows the About chapter titles exist but they don't render visually — the `MaskedLines` outer wrapper is an inline `<span>` containing block children, which collapses in an inline context (works in the hero only because it's inside an `<h1>` block). Fixing the wrapper to be block-level:
+Action: search_replace({"new_str":"export const MaskedLines = ({ lines, className = \"\", delay = 0, stagger = 0.12 }) => (\n  <span className={`block ${className}`}>","old_str":"export const MaskedLines = ({ lines, className = \"\", delay = 0, stagger = 0.12 }) => (\n  <span className={className}>","path":"/app/frontend/src/components/site/Reveal.jsx"})
+Observation: Edit was successful.
